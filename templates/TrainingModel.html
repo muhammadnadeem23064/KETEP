@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./static/images/favicon.ico">
+
+
+    <title>프로젝트 열기</title>
+    <!-- <title>New Scenario</title> -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='resources/bootstrap.min.css')}}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{url_for('static', filename='resources/jumbotron.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='resources/blog.css')}}">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="col-2 pt-1">
+			<a href="/"><img src="./static/images/logo.png" height="45" width="100" alt=""></a>
+		</div>
+	<table>
+		<tr>
+			<td>
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault" style="margin-right:40px" >
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="./newScenario.html" target="_self" ><!--(E) New scenario-->새 프로젝트</a>
+			  </li>
+<!--			  <li class="nav-item dropdown">-->
+<!--				<a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu2</a>-->
+<!--				<div class="dropdown-menu" aria-labelledby="dropdown01">-->
+<!--				  <a class="dropdown-item" href="./index.html" target="_self">Home</a>-->
+<!--				  <a class="dropdown-item" href="./analysis.html" target="_self">XAI analysis</a>-->
+<!--				</div>-->
+<!--			  </li>-->
+			</ul>
+<!--			<form class="form-inline my-2 my-lg-0">-->
+<!--			  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+<!--			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--			</form>-->
+
+		</div>
+			</td>
+			<td >
+				<div id="navbarsExampleDefault" style="margin-right:40px">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/" target="_self">프로젝트 목록</a>
+				</li>
+			</ul>
+		</div>
+			</td>
+		</tr>
+	</table>
+    </nav>
+
+
+      <main role="main" class="container">
+          <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        <br>프로젝트 생성
+      </h3>
+
+
+<!--
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="./newScenario.html">프로젝트 생성</a>
+  </li>
+</ul>
+-->
+</div>
+      
+
+      <article class="blog-post">
+        <form method="POST" style="padding-left:100px" enctype="multipart/form-data">
+			<div class="form-group row" style="padding-top">
+				<label for="staticEmail" class="col-sm-3 col-form-label">Model Name</label>
+				<div class="col-sm-5">
+				 <input type="text" class="form-control"  name="model_name"></input>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputPassword" class="col-sm-3 col-form-label">예측 모델</label>
+				<div class="col-sm-3">
+				  <select id="trainmodel" name="trainmodel" class="form-select" style="width:135px;height:35px;text-align:center">
+                      <option value="deayang_ai_lightbgm">deayang_ai_lightbgm</option>
+					  <option value="deayang_ai_xgboost">deayang_ai_xgboost</option>
+					  <option value="deayang_ai_random_forest">deayang_ai_random_forest</option>
+					  <option value="deayang_ai_mlp_regressor">deayang_ai_mlp_regressor</option>
+				  </select>
+				 </div>
+			</div>
+
+			<div class="form-group row" style="padding-top">
+				<label for="staticEmail" class="col-sm-3 col-form-label">입력 데이터</label>
+				<div class="col-sm-5">
+                 <div class="form-group row">
+				 <div class="col-sm-3">
+				 </div>
+					 <form action="/models_list_save" method="post" enctype="multipart/form-data">
+						  <input type="file" class="btn btn-primary" name="uploadexcel" id=""></input>
+					 </form>
+
+				</div>
+			</div>
+
+			<div style="padding-left:150px">
+				<button type="submit" class="btn btn-primary"><!--(E)CREATE-->저장</button>
+				<input type="reset" value="RESET" class="btn btn-primary" style="margin-left:20px"></input>
+			</div>
+		</form>
+
+        
+
+    </div>
+		<aside class="col-md-4 blog-sidebar">
+<!--if we need to add side information use this file
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+
+          <div class="p-4">
+          <h4 class="fst-italic">부제</h4>
+-->
+<!--          <ol class="list-unstyled mb-0">-->
+<!--            <li><a class="nav-link" href="./forecast.html" target="_self">사용량 예측</a></li>-->
+<!--			<li><a class="nav-link" href="./analysis.html" target="_self">XAI 진단</a></li>-->
+<!--          </ol>-->
+        </div>
+
+        </aside>
+
+  </div>
+
+        </div><!-- /.blog-main -->
+
+        <!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="forecast-footer">
+      <p>© Sejong University CVPR Lab 2022</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="./resources/jquery-slim.min.js"><\/script>')</script>
+    <script src="{{url_for('static', filename = 'resources/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='resources/bootstrap.min.js')}}"></script>
+  </body>
+</html>

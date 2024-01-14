@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" xmlns:margin-top="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Index</title>
+	<style>
+		.div-left{width:300px;height:120px;border:1px;float:left}
+		table {
+			counter-reset: tableCount;
+		}
+		.counterCell:before {
+			content: counter(tableCount);
+			counter-increment: tableCount;
+		}
+	</style>
+    <!-- Bootstrap core CSS -->
+    <link href="./static/resources/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/resources/jumbotron.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="./static/resources/blog.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet" />
+	<script>
+		function RemoveRow(TS){
+			$(TS).parents("tr").remove();
+		}
+	</script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="col-2 pt-1">
+			<a href="/"><img src="./static/images/logo.png" height="45" width="100" alt=""></a>
+		</div>
+	<table>
+		<tr>
+			<td>
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault" style="margin-right:40px" >
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="./newScenario.html" target="_self" ><!--(E) New scenario-->새 프로젝트</a>
+			  </li>
+<!--			  <li class="nav-item dropdown">-->
+<!--				<a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu2</a>-->
+<!--				<div class="dropdown-menu" aria-labelledby="dropdown01">-->
+<!--				  <a class="dropdown-item" href="./index.html" target="_self">Home</a>-->
+<!--				  <a class="dropdown-item" href="./analysis.html" target="_self">XAI analysis</a>-->
+<!--				</div>-->
+<!--			  </li>-->
+			</ul>
+<!--			<form class="form-inline my-2 my-lg-0">-->
+<!--			  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+<!--			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--			</form>-->
+
+		</div>
+			</td>
+			<td >
+				<div id="navbarsExampleDefault" style="margin-right:40px">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/" target="_self">프로젝트 목록</a>
+				</li>
+			</ul>
+		</div>
+			</td>
+
+		</tr>
+	</table>
+    </nav>
+
+	<hr>
+	
+      <main role="main" class="container">
+<!--
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">프로젝트 목록</a>
+  </li>
+</ul>
+-->
+		<div class="row g-5">
+			<div class="col-md-8">
+				  <h3 class="pb-4 mb-4 fst-italic border-bottom">
+					<br>교육받은 모델 목록
+				  </h3>
+
+<!--				<article class="blog-post">
+					<h2>Project list</h2>
+-->
+					<div style="width:200px;margin-left: auto; margin-right: 0; margin-bottom: 13px">
+
+					<!--(E)<input class="form-control mr-sm-2" id="myInput" type="text" placeholder="Search" aria-label="Search" >-->
+					<input class="form-control mr-sm-2" id="myInput" type="text" placeholder="프로젝트 검색" aria-label="프로젝트 검색" >
+				</div>
+						<div class="table-responsive">
+							<table class="table table-striped table-sm">
+							  <thead>
+								<tr>
+								  <th scope="col"><!--ID-->No</th>
+								  <th scope="col"><!--(E)Model name-->모델명</th>
+								  <th scope="col"><!--(E)Train Columns-->동작 선택</th>
+									<th scope="col"><!--(E)Performance with validation data-->검증 데이터를 사용한 성능</th>
+								</tr>
+							  </thead>
+							  <tbody id="mymodels">
+							  {% for row in rows %}
+								<tr>
+									<td class="counterCell"></td>
+								  <td style="color: blue;">{{row["m_name"]}}</td>
+									<td style="color: blue;">{{row["train_columns"]}}</td>
+									<td style="color: blue;">{{row["perf_on_val_data"]}}</td>
+<!--								  <td><a href="#"><button name="Report" value="report" type="button" class="btn btn-primary">Report</button></a></td>-->
+								</tr>
+							  {% endfor %}
+							  </tbody>
+							</table>
+
+						</div>
+					</article>
+
+						</div>
+							<aside class="col-md-4 blog-sidebar">
+							  <div class="p-3 mb-3 bg-light rounded">
+<!--IF WE NEED SIDE NOTE USE THIS PART
+								<h4 class="font-italic">About</h4>
+								<p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+							  </div>
+							  <div class="p-4" margin-top:>
+							  <h4 class="fst-italic">전력수급</h4>
+							  <ol class="list-unstyled mb-0">
+							  </ol>
+							</div>
+-->
+							</aside>
+
+			</div>
+
+        </div><!-- /.blog-main -->
+
+        <!-- /.blog-sidebar -->
+
+
+    </main><!-- /.container -->
+
+    <footer class="forecast-footer">
+      <p>&copy; Sejong University CVPR Lab 2022</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="./resources/jquery-slim.min.js"><\/script>')</script>
+    <script src="./static/resources/popper.min.js"></script>
+    <script src="./static/resources/bootstrap.min.js"></script>
+	<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./static/images/favicon.ico">
+
+    <title>Edit</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./static/resources/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/resources/jumbotron.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="./static/resources/blog.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="col-2 pt-1">
+		<img src="./static/images/logo.png" height="45" width="100" alt=""></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./newScenario.html" target="_self">프로젝트 만들기</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu2</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+				<a class="dropdown-item" href="./index.html" target="_self">Home</a>
+				<a class="dropdown-item" href="./analysis.html" target="_self">XAI analysis</a>
+				<a class="dropdown-item" href="./forecast.html" target="_self">Energy demand</a>
+			</div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+      <main role="main" class="container">
+          <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        
+      </h3>
+
+      
+
+      <article class="blog-post">
+        <form method="POST" style="padding-left:100px">
+			<div class="form-group row" style="padding-top">
+				<label for="staticEmail" class="col-sm-3 col-form-label">프로젝트 이름</label>
+				<div class="col-sm-5">
+				 <input type="text" class="form-control" name="nn" value="" id="nn" disabled>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputPassword" class="col-sm-3 col-form-label">모델 선택</label>
+				<div class="col-sm-3">
+				  <select id="trainmodel" name="trainmodel" class="form-select" style="width:135px;height:35px;text-align:center">
+				    <option>select</option>
+					<option>model1</option>
+					<option>model2</option>
+					<option>model3</option>
+				  </select>
+				</div>
+			</div>	
+			<div class="form-group row">
+				<label for="inputPassword" class="col-sm-3 col-form-label">Test data</label>
+				<div class="col-sm-3">
+				  <input type="text" class="form-control" id="datatext" name="datatext">
+				</div>
+				<button type="submit" name="submit" class="btn btn-primary mb-2" onclick="upload.click()">Browse</button>
+		    </div>
+			<div style="padding-left:150px">
+				<button type="button" class="btn btn-primary">Predict</button>
+				<input type="reset" value="RESET" class="btn btn-primary" style="margin-left:20px" >
+			</div>
+		</form>
+
+        
+
+
+
+
+    </div>
+		<aside class="col-md-4 blog-sidebar">
+<!--
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+
+          <div class="p-4">
+          <h4 class="fst-italic">전력수급</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a class="nav-link" href="./forecast.html" target="_self">사용량 예측</a></li>
+			<li><a class="nav-link" href="./analysis.html" target="_self">XAI 진단</a></li>
+          </ol>
+        </div>
+-->
+        </aside>
+
+  </div>
+
+        </div><!-- /.blog-main -->
+
+        <!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>&copy; Sejong University CVPR Lab 2022</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="./resources/jquery-slim.min.js"><\/script>')</script>
+    <script src="./resources/popper.min.js"></script>
+    <script src="./resources/bootstrap.min.js"></script>
+  </body>
+</html>

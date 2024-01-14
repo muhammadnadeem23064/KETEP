@@ -1,0 +1,90 @@
+[
+  {
+    "DateTime": "2020-12-15 06:00:00",
+    "temp": -9.3,
+    "windspeed": 1.8,
+    "humidity": 31.1,
+    "holiday": 0,
+    "month": 12,
+    "hour": 6,
+    "pred": 10.404265810675659,
+    "shap": "db\\database\\388\\waterfall_0.png"
+  },
+  {
+    "DateTime": "2020-12-15 07:00:00",
+    "temp": -9.2,
+    "windspeed": 1.5,
+    "humidity": 31.6,
+    "holiday": 0,
+    "month": 12,
+    "hour": 7,
+    "pred": 10.404265810675659,
+    "shap": "db\\database\\388\\waterfall_1.png"
+  },
+  {
+    "DateTime": "2020-12-15 08:00:00",
+    "temp": -9.1,
+    "windspeed": 1.3,
+    "humidity": 32.9,
+    "holiday": 0,
+    "month": 12,
+    "hour": 8,
+    "pred": 10.404265810675659,
+    "shap": "db\\database\\388\\waterfall_2.png"
+  },
+  {
+    "DateTime": "2020-12-15 09:00:00",
+    "temp": -8.6,
+    "windspeed": 1.5,
+    "humidity": 31.4,
+    "holiday": 0,
+    "month": 12,
+    "hour": 9,
+    "pred": 10.404265810675659,
+    "shap": "db\\database\\388\\waterfall_3.png"
+  },
+  {
+    "DateTime": "2021-09-02 19:00:00",
+    "temp": 23.7,
+    "windspeed": 1.3,
+    "humidity": 64.9,
+    "holiday": 0,
+    "month": 9,
+    "hour": 19,
+    "pred": 40.33862311711759,
+    "shap": "db\\database\\388\\waterfall_4.png"
+  },
+  {
+    "DateTime": "2021-12-15 11:00:00",
+    "temp": 7.9,
+    "windspeed": 0.9,
+    "humidity": 86.9,
+    "holiday": 0,
+    "month": 12,
+    "hour": 11,
+    "pred": 8.82260321699235,
+    "shap": "db\\database\\388\\waterfall_5.png"
+  },
+  {
+    "DateTime": "2021-12-15 12:00:00",
+    "temp": 8.5,
+    "windspeed": 0.9,
+    "humidity": 82.1,
+    "holiday": 0,
+    "month": 12,
+    "hour": 12,
+    "pred": 13.342920814595,
+    "shap": "db\\database\\388\\waterfall_6.png"
+  },
+  {
+    "DateTime": "2021-12-15 13:00:00",
+    "temp": 9.8,
+    "windspeed": 1.5,
+    "humidity": 69.6,
+    "holiday": 0,
+    "month": 12,
+    "hour": 13,
+    "pred": 19.93482829830804,
+    "shap": "db\\database\\388\\waterfall_7.png"
+  }
+]
